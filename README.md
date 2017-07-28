@@ -83,3 +83,7 @@ etc...
 
 
   - A décima primeira atividade é criar um método que tem a mesma responsabilidade que a décima atividade, mas dessa vez é case insensitive. O uso de funções prontas é proibido, com a excessão de chr(), ord(), strlen(), e outras atividades. Dica: Pesuise tabela ASCII, e sua relação com as funções chr() e ord().
+
+
+
+LEMBRE-SE QUE O GOOGLE, A DOCUMENTAÇÃO DO PHP E PEDIR AJUDA AOS MEMBROS É LIBERADO E RECOMENDADO.
