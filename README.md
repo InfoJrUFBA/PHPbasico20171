@@ -6,14 +6,14 @@ Este repositório é para uma capacitação de php básico e estrutura mvc, port
 
 Se o enunciado não diz que funções prontas são proibidas, pode usá-las! Uma das partes mais importantes de desenvolvimento é saber navegar a documentação e conhecer as funções que ela oferece. Consulta à internet é liberadíssima.
 
-As atividades NÃO foram ordenadas por dificuldade. Então se uma atividade parecer muito difícil, pode pular e tentar outra primeiro. Mas atenção, algumas atividades permitem que você use o código feito pra responder outras atividades.
-
-Crie um arquivo chamado Atividades.php no diretório PHPbasico20171 e implemente as respostas nele. Salve suas respostas (mande elas para seu e-mail ou algo assim), e também crie uma nova branch nesse repositório remoto com seu nome e dê um commit com suas respostas.
+As atividades NÃO foram ordenadas por dificuldade. Então se uma atividade parecer muito difícil, pode pular e tentar outra primeiro. Mas atenção, algumas atividades permitem que você use o código feito pra responder outras atividades. Se atente ao tipo de entrada, se é natural, inteiro, string, etc. Se uma questão recebe inteiros e seu método só funciona para números positivos, seu método está apenas "parcialmente" correto.
 
 Suas respostas serão avaliadas pricipalmente com base em:
-1. Lógica (se o método funciona, e se ele não tem coisas desnecessárias)
+1. Lógica (se o método funciona corretamente, e se ele não tem coisas desnecessárias)
 2. Legibilidade (se no evento de você ser atropelado por um buzu na saída da capacitação qualquer outro trainee conseguiria entender seu código)
 3. Complexidade (se seu código tem a melhor complexidade, eficiência e tempo de execução)
+
+Não se preocupe se não conseguir resolver todos os desafios. Alguns deles são difíceis. Tente todos, e caso tenha alguma dúvida não hesite em perguntar. Caso consiga uma resposta parcial, ou só consiga codar até certo ponto, mostre o código parcial mesmo. O uso de comentários para explicação não só é permitido, como é recomendado para essa atividade.
 
 BOA SORTE!
 
@@ -46,27 +46,27 @@ etc...
 
 
 
- - A quarta atividade é criar um método que recebe dois inteiros, $a e $b, e retorna $a+$b. Mas usando APENAS loops, ifs, incremento e decremento. Ou seja, nada de '+', '-', '*', '/', etc. Nem funções prontas!
+ - A quarta atividade é criar um método que recebe dois inteiros, $a e $b, e retorna $a+$b. Mas usando APENAS loops, ifs, incremento e decremento. Ou seja, nada de '+', '-', '*', '/', etc. Nem funções prontas! Não se preocupe com números negativos, por enquanto...
 
 
 
 
- - A quinta atividade é criar um método que recebe dois inteiros, $a e $b, e retorna $a*$b. Mas usando APENAS loops, ifs, incremento e decremento. Ou seja, nada de '+', '-', '*', '/', etc. Nem funções prontas! Mas pode usar o método de soma feito na quarta atividade.
+ - A quinta atividade é criar um método que recebe dois inteiros, $a e $b, e retorna $a*$b. Mas usando APENAS loops, ifs, incremento e decremento. Ou seja, nada de '+', '-', '*', '/', etc. Nem funções prontas! Mas pode usar o método de soma feito na quarta atividade. Não se preocupe com números negativos, por enquanto...
 
 
 
 
-  - A sexta atividade é criar um método que recebe dois inteiros, $a e $b, e retorna pow($a, $b). Mas usando APENAS loops, ifs, incremento e decremento. Ou seja, nada de '+', '-', '*', '/', etc. Nem funções prontas! Mas pode usar o método de soma feito na quarta atividade e o de multiplicação feito na quinta atividade.
+  - A sexta atividade é criar um método que recebe dois inteiros, $a e $b, e retorna pow($a, $b). Mas usando APENAS loops, ifs, incremento e decremento. Ou seja, nada de '+', '-', '*', '/', etc. Nem funções prontas! Mas pode usar o método de soma feito na quarta atividade e o de multiplicação feito na quinta atividade. Não se preocupe com números negativos, por enquanto...
 
 
 
 
-  - A sétima atividade é criar um método, que recebe uma string $s e retorna strtolower($s), mas sem usar funções prontas, com a excessão de chr() e ord()! Dica: Tabela ASCII.
+  - A sétima atividade é criar um método, que recebe uma string $s e retorna strtolower($s), mas sem usar funções prontas, com a excessão de chr(), ord() e strlen()! Dica: Tabela ASCII.
 
 
 
 
-   - A oitava atividade é criar um método que recebe um inteiro e retorna seu equivalente em binário. Não pode usar funções prontas.
+   - A oitava atividade é criar um método que recebe um número natural e retorna seu equivalente em binário. Não pode usar funções prontas, com a excessão dos métodos criados em atividades anteriores.
 
 
 
@@ -76,9 +76,9 @@ etc...
 
 
 
- - A décima atividade é criar um método que recebe duas strings $needle e $haystack. O método deve retornar true se $needle é uma substring de $haystack, ou false se não. Esse método deve ser case sensitive. O uso de funções prontas é proibido.
+ - A décima atividade é criar um método que recebe duas strings $agulha e $palheiro. O método deve retornar true se $agulha é uma substring de $palheiro, ou false se não. Esse método deve ser case sensitive. O uso de funções prontas é proibido, com a excessão de strlen().
 
 
 
 
-  - A décima primeira atividade é criar um método que tem a mesma responsabilidade que a décima atividade, mas dessa vez é case insensitive. O uso de funcções prontas é proibido, com a excessão de chr(), ord(), e a décima atividade. Dica: Tabela ASCII
+  - A décima primeira atividade é criar um método que tem a mesma responsabilidade que a décima atividade, mas dessa vez é case insensitive. O uso de funcções prontas é proibido, com a excessão de chr(), ord(), strlen(), e outras atividades. Dica: Tabela ASCII

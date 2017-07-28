@@ -24,6 +24,7 @@ class User {
             $this->age = array_key_exists('age', $attributes) ? $attributes['age'] : '';
             $this->level = array_key_exists('level', $attributes) ? $attributes['level'] : '';
             $this->password = array_key_exists('password', $attributes) ? $attributes['password'] : '';
+            $this->employer = array_key_exists('employer', $attributes) ? $attributes['employer'] : '';
         }
     }
 
@@ -39,7 +40,7 @@ class User {
             $arr['age'] = rand(16, 80);
             $arr['level'] = rand(1, 3);
             $arr['password'] = password_hash($arr['name'], PASSWORD_DEFAULT);
-            $arr['employer'] = rand(0, 10);
+            $arr['employer'] = rand(1, 10);
             $users[$i] = new User($arr);
         }
         return $users;
@@ -58,14 +59,9 @@ class User {
         $arr['age'] = rand(16, 80);
         $arr['level'] = rand(1, 3);
         $arr['password'] = password_hash($arr['name'], PASSWORD_DEFAULT);
-        $arr['employer'] = rand(0, 10);
+        $arr['employer'] = rand(1, 10);
         $user = new User($arr);
         return $user;
     }
 }
-
-$c = 'B';
-var_dump($c >= 'A' && $c <= 'Z');
-var_dump($c >= 'a' && $c <= 'z');
-echo $c+32;
 ?>

@@ -20,6 +20,7 @@ class Business {
             $this->id = array_key_exists('id', $attributes) ? $attributes['id'] : '';
             $this->name = array_key_exists('name', $attributes) ? $attributes['name'] : '';
             $this->logo = array_key_exists('logo', $attributes) ? $attributes['logo'] : '';
+            $this->owners_id = array_key_exists('owners_id', $attributes) ? $attributes['owners_id'] : '';
         }
     }
 
