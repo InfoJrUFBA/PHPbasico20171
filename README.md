@@ -47,17 +47,17 @@ etc...
 
 
 
- - A quarta atividade é criar um método que recebe dois inteiros, $a e $b, e retorna $a+$b. Mas usando APENAS loops, ifs, incremento e decremento. Ou seja, nada de '+', '-', '*', '/', etc. Nem funções prontas! Não se preocupe com números negativos, por enquanto...
+ - A quarta atividade é criar um método que recebe dois naturais, $a e $b, e retorna $a+$b. Mas usando APENAS loops, ifs, incremento e decremento. Ou seja, nada de '+', '-', '*', '/', etc. Nem funções prontas!
 
 
 
 
- - A quinta atividade é criar um método que recebe dois inteiros, $a e $b, e retorna $a*$b. Mas usando APENAS loops, ifs, incremento e decremento. Ou seja, nada de '+', '-', '*', '/', etc. Nem funções prontas! Mas pode usar o método de soma feito na quarta atividade. Não se preocupe com números negativos, por enquanto...
+ - A quinta atividade é criar um método que recebe dois naturais, $a e $b, e retorna $a*$b. Mas usando APENAS loops, ifs, incremento e decremento. Ou seja, nada de '+', '-', '*', '/', etc. Nem funções prontas! Mas pode usar o método de soma feito na quarta atividade.
 
 
 
 
-  - A sexta atividade é criar um método que recebe dois inteiros, $a e $b, e retorna pow($a, $b). Mas usando APENAS loops, ifs, incremento e decremento. Ou seja, nada de '+', '-', '*', '/', etc. Nem funções prontas! Mas pode usar o método de soma feito na quarta atividade e o de multiplicação feito na quinta atividade. Não se preocupe com números negativos, por enquanto...
+  - A sexta atividade é criar um método que recebe dois naturais, $a e $b, e retorna pow($a, $b). Mas usando APENAS loops, ifs, incremento e decremento. Ou seja, nada de '+', '-', '*', '/', etc. Nem funções prontas! Mas pode usar o método de soma feito na quarta atividade e o de multiplicação feito na quinta atividade.
 
 
 
