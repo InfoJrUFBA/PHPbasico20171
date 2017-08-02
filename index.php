@@ -66,7 +66,7 @@ function multiplica($a, $b) {
 /* 6ª Atividade */
 function eleva($a, $b) {
     $num2 = 1;
-
+    $numero = "";
     if ($b < 0) {
         $cont = -1;
         while ($cont >= $b) {
@@ -74,6 +74,10 @@ function eleva($a, $b) {
             $num2 = multiplica($num2, $a);
             $cont--;
         }
+
+        $numero = "1/";
+        $numero .= $num2;
+        $num2 = $numero;
 
     } elseif ($b > 0) {
         $cont = 1;
@@ -105,7 +109,7 @@ function binario($a) {
     // Loop para pegar o resto e o quociente.
     while ($a>=2) {
         $num[] = $a%2;
-        $a = intval($a/2);
+        $a = (int)$a/2;
         $cont++;
     }
 
@@ -121,8 +125,54 @@ function binario($a) {
 
 }
 
+
 /* 9ª Atividade */
 function distancia($x1, $y1, $x2, $y2) {
     // Fórmula da distância entre 2 pontos
     return (($x1-$x2)**2 + ($y1-$y2)**2)**0.5;
 }
+
+/* 10 Atividade */
+function substring1($agulha, $palheiro) {
+    // Se $agulha for maior que $palheiro, obviamente não será uma substring.
+    if (strlen($agulha) > strlen($palheiro)) return false; 
+    // Se $agulha for igual a $palheiro, verifico o valor.
+    elseif (strlen($agulha) == strlen($palheiro) && $agulha == $palheiro) return true; 
+    // Se $agulha for menor que $palheiro, percorro a string $palheiro formando todas as substrings possíveis.
+    else {
+        for ($i=0; $i<strlen($palheiro); $i++) {
+            $str = "";
+            for ($j=$i; $j<strlen($palheiro); $j++) {
+                // Adiciono cada caracter de $palheiro em $str e verifico a cada iteração se $str é igual a $agulha.
+                $str .= $palheiro[$j];
+                if ($str == $agulha) return true;
+            }
+        }
+        return false;
+    }
+}
+
+/* 11 Atividade */
+function substring2($agulha, $palheiro) {
+    $palheiro = minusculo($palheiro);
+    $agulha = minusculo($agulha);
+
+    // Se $agulha for maior que $palheiro, obviamente não será uma substring.
+    if (strlen($agulha) > strlen($palheiro)) return false; 
+    // Se $agulha for igual a $palheiro, verifico o valor.
+    elseif (strlen($agulha) == strlen($palheiro) && $agulha == $palheiro) return true; 
+    // Se $agulha for menor que $palheiro, percorro a string $palheiro formando todas as substrings possíveis.
+    else {
+        for ($i=0; $i<strlen($palheiro); $i++) {
+            $str = "";
+            for ($j=$i; $j<strlen($palheiro); $j++) {
+                // Adiciono cada caracter de $palheiro em $str e verifico a cada iteração se $str é igual a $agulha.
+                $str .= $palheiro[$j];
+                if ($str == $agulha) return true;
+            }
+        }
+        return false;
+    }
+}
+
+    
