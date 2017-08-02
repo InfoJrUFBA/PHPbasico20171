@@ -1,18 +1,18 @@
 <?php
 
-	$inteiroA = -2;
-	$inteiroB = -3;
-
     // Funções auxiliares
 
-    // retorna o valor absoluto
-    function vAbs ( $a ) {
-        if ($a<0) {
-            return -$a;
-        } else { 
+        // retorna o valor absoluto
+        function vAbs ( $a ) {
+            $aux=$a;
+            if ($a<0) {
+                for ( $i=0 ; $i>$aux ; $i-- ) {
+                    $a++;
+                    $a++;
+                }
+            }
             return $a;
         }
-    }
 
 	// Atividade 4
 
@@ -82,6 +82,21 @@
         }
     }
 
-	echo potencia ($inteiroA, $inteiroB);
+    // Atividade 7
+
+    function caixaBaixa (string $str) {
+        for ($i=0 ; $i<strlen($str) ; $i++ ) {
+            if (ord($str[$i])>64 && ord($str[$i])<91) {
+                $str[$i] = chr( soma( ord($str[$i]) , 32 ) );
+            }
+        }
+        return $str;
+    }
+
+    $inteiroA = 2;
+    $inteiroB = -3;
+    $string = "Ata Po!";
+
+	echo caixaBaixa ($string);
 
 ?>
