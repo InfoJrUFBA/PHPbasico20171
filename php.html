@@ -1,0 +1,35 @@
+<?php 
+	//Declara as variáveis para as operações
+	$num1 = 5;
+	$num2 = 6;
+
+	//Cria função de soma de 2 numeros naturais
+	function soma ($a, $b){
+		//Loop que incrementa em $a a quantidade de $b
+		for($i=0; $i<$b; $i ++){
+		$a++;
+	}
+
+	return $a;
+	}
+
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Atv. PHP Básico</title>
+	</head>
+	<body>
+		<h2>Função de Soma</h2>
+		<p>
+			<?php
+			$result = soma($num1, num2);
+			echo $result;
+		 	?>
+		 	
+		 </p>
+
+	</body>
+</html>
