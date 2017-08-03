@@ -5,9 +5,9 @@
 	$num2 = 3;
 	$s = "ERA uma VEZ um LUGARZINHO no MEIO do NADA";
 
-	
+	//Cria função que soma 2 numeros naturais
 	function soma ($a, $b){
-		//Cria função que soma 2 numeros naturais
+		
 		/*Verifica o menor número. Incrementa  em loop o valor do menor no maior
 		(Caso o segundo núemro seja muito maior, não precisará fazer tantos loops)*/
 		if ($a>=$b) {
@@ -25,9 +25,9 @@
 		}
 	}
 
-	
+	//Cria função que multiplica 2 numeros naturais
 	function produto ($a, $b){
-		//Cria função que multiplica 2 numeros naturais
+		
 		//Variável de resultado vai ser um somatório de $(número menor) parcelas, cada uma de valor '$(número maior)'
 		$result = 0;
 		
@@ -45,9 +45,9 @@
 		return $result;
 	}
 
-	
+	//Cria função que eleva o primeiro número natural pelo segundo
 	function potencia ($a, $b){
-		//Cria função que eleva o primeiro número natural pelo segundo
+		
 		//Variável de resultado vai ser um produtório de $b parcelas, cada uma de valor '$a'
 		$result = 1;
 			
@@ -58,9 +58,9 @@
 		return $result;
 	}
 
-	
+	//Cria função que transforma uma string para letras minúsculas
 	function minusculas($str){
-		//Cria função que transforma uma string para letras minúsculas
+		
 		/*Verifica cada char da string, analisando se seu valor na tabela ASCII está entre 'A' e 'Z'.
 		Caso esteja, soma a esse char o valor de ('a'-'A'), que é a distância entre qualquer letra minuscula e maiúcula na tabela ASCII, tendo em vista que MAIÚSCULA < minúscula.*/
 		for($i=0; $i<strlen($str); $i++){
@@ -76,6 +76,7 @@
 		Portanto, não consegui tratar dos caracteres especiais.*/
 	}
 
+	//Cria função que converte base 10 em base 2
 	function binario($a){
 		//Declara uma string sem caracteres.
 		$convert = "";
@@ -95,11 +96,28 @@
 		return $bin;
 	}
 
+	//Cria função que calcula a distância entre 2 pontos
 	function distancia ($x1, $y1, $x2, $y2){
-		//Fórmula da distância entre dois pontos
+		//Fórmula da distância entre dois pontos #IloveGA
 		$dist = sqrt(pow(($x2 - $x1), 2) + pow(($y2 - $y1), 2));
 
 		return $dist;
+	}
+
+	function substring ($agulha, $palheiro){
+		
+		$sub = false;
+		if (strlen($agulha) <= strlen($palheiro)) {
+			for ($i=0; $i<strlen($palheiro); $i++) { 
+			$teste = "";
+				for ($j=$i; $j<($i+strlen($agulha)) ; $j++) { 
+					if ($i+strlen($agulha) > strlen($palheiro)) break;
+					else $teste .= $palheiro[$j];
+				}
+			if ($teste == $agulha) $sub = true;
+			}
+		}
+		return $sub;
 	}
 
 ?>
@@ -173,6 +191,19 @@
 				//Exibe o resultado
 				echo "Dados os pontos A = ($x1,$y1) e B = ($x2,$y2):
 				<br /> Distância entre A e B = $result7";
+		 	?>
+		</p></div>
+
+		<div><h3>Função de Substring</h3>
+		<p>
+			<?php
+				
+				//Guarda o retorno da fuñção em uma variável
+				$str1 = "Aqui é a PULIÇa";
+				$str2 = "PUL";
+				$result8 = substring($str2, $str1);
+				if ($result8 == true) echo "'$str2' é substring de '$str1'";
+				else echo "'$str2' não é substring de '$str1'";
 		 	?>
 		</p></div>
 	</body>
