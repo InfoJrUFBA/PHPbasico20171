@@ -1,10 +1,8 @@
 <?php 
-	
-	header('Content-type: text/html; charset=utf-8');
 
 	//Declara as variáveis para as operações
-	$num1 = 25;
-	$num2 = 6;
+	$num1 = 59;
+	$num2 = 3;
 	$s = "ERA uma VEZ um LUGARZINHO no MEIO do NADA";
 
 	
@@ -96,6 +94,14 @@
 
 		return $bin;
 	}
+
+	function distancia ($x1, $y1, $x2, $y2){
+		//Fórmula da distância entre dois pontos
+		$dist = sqrt(pow(($x2 - $x1), 2) + pow(($y2 - $y1), 2));
+
+		return $dist;
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -150,12 +156,24 @@
 
 		<div><h3>Função de Conversão (Base 10 >> Base 2)</h3>
 			<?php
-				//Guarda os retornos das fuñções em duas variável
+				//Guarda os retornos das fuñções em duas variáveis
 				$result5 = binario($num1);
 				$result6 = binario($num2);
 		 	?>
 		 	<p><?php echo "$num1 >> $result5"; ?></p>
 		 	<p><?php echo "$num2 >> $result6"; ?></p>
 		</div>
+
+		<div><h3>Função de Distância entre pontos</h3>
+		<p>
+			<?php
+				//Guarda o retorno da fuñção em uma variável
+				$x1 = 7; $y1 = 3; $x2 = 5;  $y2 = 2; 
+				$result7 = distancia($x1, $y1, $x2, $y2);
+				//Exibe o resultado
+				echo "Dados os pontos A = ($x1,$y1) e B = ($x2,$y2):
+				<br /> Distância entre A e B = $result7";
+		 	?>
+		</p></div>
 	</body>
 </html>
