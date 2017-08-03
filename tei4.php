@@ -17,8 +17,8 @@
 
 	//7
 
-	function sete( $s ){
-		$s = 'ABCDEFGhuiuxyzaUIUTG';
+	function sete($s){
+		$s = 'ABCDEFGJJJJ';
 		for( $i = 0 ; $i < strlen($s) ; $i++){
 			if(ord($s[$i]) > 96){
 
@@ -28,5 +28,18 @@
 	}
 		return $s;
 	}
-	echo sete($s);
+	//8
+$str = '';
+	function bin($nat, $arg = 2){	
+    $num = "0123456789abcdefghijklmnopqrstuvwxyz";
+    $str = '';
+    do {
+        $str = $num[$nat % $arg] . $str;
+        $nat = (int)($nat / $arg);
+    }
+    while($nat);
+    return $str;
+}
+
+	echo bin($str);
 ?>
