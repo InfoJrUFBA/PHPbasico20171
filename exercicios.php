@@ -1,10 +1,5 @@
 <?php 
 
-	//Declara as variáveis para as operações
-	$num1 = 59;
-	$num2 = 3;
-	$s = "ERA uma VEZ um LUGARZINHO no MEIO do NADA";
-
 	//Cria função que soma 2 numeros naturais
 	function soma ($a, $b){
 		
@@ -104,8 +99,10 @@
 		return $dist;
 	}
 
-	function substring ($agulha, $palheiro){
+	//Cria função que verifica se uma string é substring da outra (case sensitive)
+	function substringSen ($agulha, $palheiro){
 		
+		//Para cada char de $palheiro, itera x  vezes $palheiro à direita (x=tamanho da string $agulha), concatenando cada char em uma string temporária $teste.
 		$sub = false;
 		if (strlen($agulha) <= strlen($palheiro)) {
 			for ($i=0; $i<strlen($palheiro); $i++) { 
@@ -114,10 +111,27 @@
 					if ($i+strlen($agulha) > strlen($palheiro)) break;
 					else $teste .= $palheiro[$j];
 				}
-			if ($teste == $agulha) $sub = true;
+			/*Compara se $teste é igual a $agulha. Caso seja, termina o loop e retorna "true".
+			Caso contrário continua o loop. Se o loop terminar sem mudar o valor de $sub, retorna "false*/	
+				if ($teste == $agulha){
+			 		$sub = true;
+			 		break;
+				}
 			}
 		}
 		return $sub;
+	}
+
+	//Cria função que verifica se uma string é substring da outra (case insensitive)
+	function substringIn ($agulha, $palheiro){
+		//Usa a função "minusculas" para converter as duas strings para letras minúsculas
+		$agulha = minusculas($agulha);
+		$palheiro = minusculas($palheiro);
+		
+		//Usa a função de verificação de substring com as strings convertidas
+		return substringSen ($agulha, $palheiro);
+
+		/*Mais uma vez, no caso de caracteres especiais, vai dar errado, pelos mesmos motivos ditos anteriormente*/
 	}
 
 ?>
@@ -132,6 +146,7 @@
 		<div><h3>Função de Soma</h3>
 		<p>
 			<?php
+				$num1 = 78945; $num2 = 55541;
 				//Guarda o retorno da fuñção em uma variável
 				$result1 = soma($num1, $num2);
 				//Exibe o resultado
@@ -143,10 +158,11 @@
 		<div><h3>Função de Multiplicação</h3>
 		<p>
 			<?php
+				$num3 = 46; $num4 = 8945;
 				//Guarda o retorno da fuñção em uma variável
-				$result2 = produto($num1, $num2);
+				$result2 = produto($num3, $num4);
 				//Exibe o resultado
-				echo "$num1 x $num2 = $result2";
+				echo "$num3 x $num4 = $result2";
 		 	?>
 		 	
 		</p></div>
@@ -154,10 +170,11 @@
 		<div><h3>Função de Potência</h3>
 		<p>
 			<?php
+				$num5 = 56; $num6 = 4;
 				//Guarda o retorno da fuñção em uma variável
-				$result3 = potencia ($num1, $num2);
+				$result3 = potencia ($num5, $num6);
 				//Exibe o resultado
-				echo "$num1 ^ $num2 = $result3";
+				echo "$num5 ^ $num6 = $result3";
 		 	?>
 		 	
 		</p></div>
@@ -165,6 +182,7 @@
 		<div><h3>Função de LowerCase</h3>
 		<p>
 			<?php
+				$s = "ERA uma VEZ um LUGARZINHO no MEIO do NADA";
 				//Guarda o retorno da fuñção em uma variável
 				$result4 = minusculas($s);
 				//Exibe o resultado
@@ -174,18 +192,17 @@
 
 		<div><h3>Função de Conversão (Base 10 >> Base 2)</h3>
 			<?php
-				//Guarda os retornos das fuñções em duas variáveis
-				$result5 = binario($num1);
-				$result6 = binario($num2);
+				$num7 = 7555; $num8 = 211;
+				$result5 = binario($num5);
+				$result6 = binario($num6);
 		 	?>
-		 	<p><?php echo "$num1 >> $result5"; ?></p>
-		 	<p><?php echo "$num2 >> $result6"; ?></p>
+		 	<p><?php echo "$num7 >> $result5"; ?></p>
+		 	<p><?php echo "$num8 >> $result6"; ?></p>
 		</div>
 
 		<div><h3>Função de Distância entre pontos</h3>
 		<p>
 			<?php
-				//Guarda o retorno da fuñção em uma variável
 				$x1 = 7; $y1 = 3; $x2 = 5;  $y2 = 2; 
 				$result7 = distancia($x1, $y1, $x2, $y2);
 				//Exibe o resultado
@@ -194,17 +211,29 @@
 		 	?>
 		</p></div>
 
-		<div><h3>Função de Substring</h3>
+		<div><h3>Função de Substring Case Sensitive</h3>
 		<p>
 			<?php
 				
-				//Guarda o retorno da fuñção em uma variável
-				$str1 = "Aqui é a PULIÇa";
-				$str2 = "PUL";
-				$result8 = substring($str2, $str1);
+				$str1 = "Arya Stark, de Winterfell";
+				$str2 = "rk, DE";
+				$result8 = substringSen($str2, $str1);
 				if ($result8 == true) echo "'$str2' é substring de '$str1'";
 				else echo "'$str2' não é substring de '$str1'";
 		 	?>
 		</p></div>
+
+		<div><h3>Função de Substring Case Insensitive</h3>
+		<p>
+			<?php
+				
+				$str3 = "Arya Stark, de Winterfell";
+				$str4 = "rk, DE";
+				$result9 = substringIn($str4, $str3);
+				if ($result9 == true) echo "'$str4' é substring de '$str3'";
+				else echo "'$str4' não é substring de '$str3'";
+		 	?>
+		</p></div>
+		
 	</body>
 </html>
