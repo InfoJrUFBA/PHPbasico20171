@@ -84,7 +84,7 @@
 
     // Atividade 7
 
-    function caixaBaixa (string $str) {
+    function caixaBaixa ( $str ) { //se o char está maiúsculo somo a 32 para pegar o equilavalente pela tabela ascii
         for ($i=0 ; $i<strlen($str) ; $i++ ) {
             if (ord($str[$i])>64 && ord($str[$i])<91) {
                 $str[$i] = chr( soma( ord($str[$i]) , 32 ) );
@@ -93,10 +93,53 @@
         return $str;
     }
 
-    $inteiroA = 2;
-    $inteiroB = -3;
-    $string = "Ata Po!";
+    // Atividade 8
 
-	echo caixaBaixa ($string);
+    function binario ( $a ) {
+        if (vAbs($a)<2) { // último caso
+            return $a<0? 1 . vAbs($a) : 0 . $a; // retorna o sinal (0 positivo, 1 negativo)
+        }
+        return (binario($a/2) . $a%2); // deixei o return em string pois se for int o 0 a esquerda que identifica posivo é excluído
+    }
+
+    // Atividade 9
+
+    function reta ( $x1 , $y1 , $x2 , $y2 ) { // apenas aplicação de fórmula
+        return (soma (potencia( ($x2-$x1), 2) , potencia( ($y2-$y1), 2)))**0.5; // **eleva a 1/2 que é raiz de 2
+    }
+
+    // Atividade 10
+
+    function procuraStr ( $agulha , $palheiro ) {
+        for ( $i=0 ; $i<strlen($palheiro); $i++) { //roda o palheiro procurando um 1 caso parecido
+            if ($palheiro[$i]===$agulha[0]) { // se achar começo a olhar a partir dali
+                $aux=true;
+                for ( $j=1 ; $j<strlen($agulha) ; $j++) {
+                    if ($agulha[$j]!==$palheiro[$j+$i]) { // se tiver algum diferente paro o for
+                        $aux=false;
+                        break;
+                    }
+                }
+                if ($aux) {
+                    return true;
+                }
+                $i+=$j; //pulo o $i pela parte q já chequei
+            }
+        }
+        return false;
+    }
+
+    // Atividade 11
+
+    function procuraStr2 ( $agulha , $palheiro) { //deixo tudo em caixa baixa e confiro depois
+        return procuraStr( caixaBaixa($agulha), caixaBaixa($palheiro));
+    }
+
+    $inteiroA = ;
+    $inteiroB = ;
+    $stringA = "";
+    $stringB = "";
+
+	var_dump();
 
 ?>
