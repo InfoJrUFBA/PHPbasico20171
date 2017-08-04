@@ -1,0 +1,43 @@
+*{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: "Andale Mono", sans-serif;
+}
+
+
+body{
+	background-color: #eee;
+}
+
+body > h1{
+	text-align: center;
+	margin: 25px 0;
+	color: #333;
+}
+
+body > h3{
+	margin: 0 13%;
+	color: #333;
+}
+
+body div{
+	border: 5px;
+	border-style: solid;
+	border-color: #0d1633;
+	margin: 20px 13% 40px 13%;
+	padding: 10px;
+	color: #0d1633;
+	background-color: #a1b1de;
+
+}
+
+div > h3{
+	
+	margin: 0 0 8px 0;
+}
+
+

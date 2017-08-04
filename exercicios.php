@@ -141,8 +141,14 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Atv. PHP Básico</title>
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<?php
+			echo "<link rel=”stylesheet” type=”text/css” href=”estilo.css” />"
+		?>
 	</head>
 	<body>
+		<h1>Funções: PHP Básico</h1>
+		<h3>InfoJr UFBA 2017.1 - Vinícius Pinto</h3>
 		<div><h3>Função de Soma</h3>
 		<p>
 			<?php
@@ -182,7 +188,7 @@
 		<div><h3>Função de LowerCase</h3>
 		<p>
 			<?php
-				$s = "ERA uma VEZ um LUGARZINHO no MEIO do NADA";
+				$s = "Eu sou o DOUGLAS, vC nao e o DOUGLAS";
 				//Guarda o retorno da fuñção em uma variável
 				$result4 = minusculas($s);
 				//Exibe o resultado
@@ -193,8 +199,8 @@
 		<div><h3>Função de Conversão (Base 10 >> Base 2)</h3>
 			<?php
 				$num7 = 7555; $num8 = 211;
-				$result5 = binario($num5);
-				$result6 = binario($num6);
+				$result5 = binario($num7);
+				$result6 = binario($num8);
 		 	?>
 		 	<p><?php echo "$num7 >> $result5"; ?></p>
 		 	<p><?php echo "$num8 >> $result6"; ?></p>
@@ -216,7 +222,7 @@
 			<?php
 				
 				$str1 = "Arya Stark, de Winterfell";
-				$str2 = "rk, DE";
+				$str2 = "sTARK";
 				$result8 = substringSen($str2, $str1);
 				if ($result8 == true) echo "'$str2' é substring de '$str1'";
 				else echo "'$str2' não é substring de '$str1'";
@@ -228,7 +234,7 @@
 			<?php
 				
 				$str3 = "Arya Stark, de Winterfell";
-				$str4 = "rk, DE";
+				$str4 = "sTARK";
 				$result9 = substringIn($str4, $str3);
 				if ($result9 == true) echo "'$str4' é substring de '$str3'";
 				else echo "'$str4' não é substring de '$str3'";
