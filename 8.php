@@ -1,0 +1,1 @@
+- A oitava atividade é criar uma função que recebe um número natural e retorna seu equivalente em binário. Não pode usar funções prontas, com a excessão dosa funçãos criados em atividades anteriores.
