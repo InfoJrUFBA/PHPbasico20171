@@ -5,24 +5,20 @@
 	$string_s = "PHP";
 	
 	//$string_s = strtolower($string_s);
-	function caractereparaindice ($string_s){
+	function conversor ($string_s) {
 		
-		int strlen( string $string_s )
-		$indice
-			for($i = 0;$i < strlen($string_s);$i++){
-				$string_s($i)
+		//$indice[int strlen($string_s)];
+
+		for($i = 0;$i < strlen($string_s);$i++){
+			//entre o intervalo maiusculo e ASCII
+			if( ord ( $string_s[$i] ) >= 65 && ord ( $string_s[$i] ) <= 90  )
+				
+				//$indice[$i] = ord($string_s[$i]);
+
+				$string_s[ ord($string_s[$i]) ] = $string_s[ ord($string_s[$i]) + 32 ];
 			}
-
-
-
+		}
 	}
-
-
-
-
-
-
 	//php
 	echo $string_s;
-
 ?>
