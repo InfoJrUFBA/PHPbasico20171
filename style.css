@@ -1,0 +1,9 @@
+.margin-box {
+    padding: 20px;
+    margin: 20px;
+    border-style: solid;
+    border-color: #35B;
+    border-radius: 5;
+    text-align: center;
+    background-color: teal;
+}
