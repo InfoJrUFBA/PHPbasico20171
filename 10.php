@@ -1,1 +1,0 @@
- - A décima atividade é criar uma função que recebe duas strings $agulha e $palheiro. A função deve retornar true se $agulha é uma substring de $palheiro, ou false se não. Essa função deve ser case sensitive. O uso de funções prontas é proibido, com a excessão de strlen().
